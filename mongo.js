@@ -1,5 +1,6 @@
 var express = require('express')
 var app = express()
+var cool = require('cool-ascii-faces');
 
 // dburl to a mongodb server hosted in the cloud (i.e., mongolab)
 var dburl = 'mongodb://github:1234@ds041871.mongolab.com:41871/github'
