@@ -1,0 +1,12 @@
+extends layout.jade
+
+block content
+    each item in events
+        div.row
+            div.two.columns
+                a(href='/view/events/' + item.id)
+                    = item.type
+            div.two.columns
+                = item.id
+            div.four.columns
+                = item.created_at

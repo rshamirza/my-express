@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    - var item = events
+    h3= item.type
+    div.row
+        div.one.column 
+            b id:
+        div.three.columns= item.id
+        div.one.column 
+            b created_at:
+        div.three.columns= item.created_at
+    div.row
+        div.one.column 
+            b public:
+        div.three.columns= item.public
+        div.one.column 
+            b actor_log:
+        div.three.columns= item.actor.login
+    div.row
+        div.one.column 
+            b repo_name:
+        div.three.columns= item.repo.name
+        div.one.column 
+            b repo_url:
+        div.three.columns= item.repo.url

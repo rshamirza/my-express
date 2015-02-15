@@ -1,0 +1,12 @@
+extends layout.jade
+
+block content
+    each item in repos
+        div.row
+            div.two.columns
+                a(href='/view/repos/' + item.id)
+                    = item.name
+            div.two.columns
+                = item.id
+            div.four.columns
+                = item.full_name

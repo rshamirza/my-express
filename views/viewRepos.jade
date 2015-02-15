@@ -1,0 +1,35 @@
+extends layout
+
+block content
+    - var item = repos
+    h3= item.name
+    div.row
+        div.one.column 
+            b id:
+        div.three.columns= item.id
+        div.one.column 
+            b full_name:
+        div.three.columns= item.full_name
+    div.row
+        div.one.column 
+            b url:
+        div.three.columns= item.html_url
+        div.one.column 
+            b description:
+        div.three.columns= item.description
+    div.row
+        div.one.column 
+            b size:
+        div.three.columns= item.size
+        div.one.column 
+            b stargazers:
+        div.three.columns= item.stargazers_count
+    div.row
+        div.one.column 
+            b watchers:
+        div.three.columns= item.watchers_count
+        div.one.column 
+             b forks:
+        div.three.columns= item.forks_count
+
+
