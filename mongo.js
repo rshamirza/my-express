@@ -1,6 +1,5 @@
 var express = require('express')
 var app = express()
-var cool = require('cool-ascii-faces');
 
 // dburl to a mongodb server hosted in the cloud (i.e., mongolab)
 var dburl = 'mongodb://github:1234@ds041871.mongolab.com:41871/github'
@@ -17,13 +16,16 @@ app.set('view engine', 'jade');
 // set where the static contents are (e.g., css, js)
 app.use(express.static(__dirname + '/public'));
 
+app.get('/', function(req, res) {
+    res.render('layout.jade')
+})
 
 require('./mongo/reposList')(app)
 require('./mongo/reposView')(app)
 require('./mongo/eventsList')(app)
 require('./mongo/eventsView')(app)
 
-var server = app.listen(process.env.PORT || 5000, function() {
+var server = app.listen(process.env.PORT || 3000, function() {
 
     var host = server.address().address
     var port = server.address().port
