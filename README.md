@@ -13,5 +13,5 @@ $ node mongo.js
 
 # View
 
-Available at http://localhost:3000/list/repos
+Available at http://localhost:5000/list/repos
 
